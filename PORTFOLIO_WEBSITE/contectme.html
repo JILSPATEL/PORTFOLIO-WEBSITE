@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css">
+    <!-- <link rel="stylesheet" href="Forms & Input Tags.css"> -->
+    <!-- <script src="Forms & Input Tags.js"></script> -->
+    <title>Forms</title>
+    <style>
+        body {
+            margin: 18px auto;
+            display: block;
+            width: 45%;
+            font-size: 20px;
+            color: white;
+            background: rgba(76, 175, 80, 0.3);
+        }
+
+        .container {
+            border: 5px solid white;
+            margin: 5px 5px 5px 5px;
+            background-color: rgb(0, 0, 57);
+            border-radius: 10px;
+            animation-name: jils;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+
+
+        }
+
+        .container h2 {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .container input,
+        select {
+            width: 150px;
+            text-align: center;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+        .container textarea {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            font-size: 20px;
+        }
+
+
+        .form1 div {
+            margin: auto;
+            padding: 5px;
+            text-align: center;
+            display: block;
+
+        }
+
+        .btn:hover {
+            color: rgb(0, 0, 57);
+            text-decoration: underline;
+            background-color: darkgray;
+        }
+
+        .x {
+            align-items: center;
+            color: white;
+        }
+
+        .x .last {
+            color: white;
+            text-decoration: none;
+            margin-right: 10px;
+        }
+
+        /* @keyframes jils {
+            from {
+                width: 200px;
+            }
+
+            to {
+                width: 1000px;
+            }
+        } */
+        footer .footer-rights {
+            text-align: center;
+            color: rgb(0, 0, 0);
+            padding: 12px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+
+        <h2 style="text-decoration: none;font-size: 50px;">Contect Me</h2>
+        <form class="form1" action="backend.php">
+            <div id="Name">
+                Your Name:<input type="text" name="MyName" placeholder="Enter Your Name">
+            </div>
+            <br>
+
+            <div id="CName">
+                Company Name:<input type="text" name="CoName" placeholder="Enter Your Company Name">
+            </div>
+            <br>
+
+            <div id="Email">
+                Email:<input type="email" name="MyEmail" placeholder="Enter Your Email">
+            </div>
+            <br>
+
+            <div id="Mobile">
+                Mobile:<input type="number" name="Mymobile" placeholder="Enter Your Mobile">
+            </div>
+            <br>
+
+            <div id="DOB">
+                Date Of Birth: <input type="date" name="MyDate" placeholder="Select Your DOB">
+            </div>
+            <br>
+
+
+
+
+            <div id="Gender">
+                Gender: Male<input type="radio" name="MyGender"> Female<input type="radio" name="MyGender"
+                    placeholder="">
+            </div>
+            <br>
+
+            <div id="Write">
+                Write About You:<br><textarea name="MyText" cols="50" rows="10"
+                    placeholder="Write info About Your Self"></textarea>
+            </div>
+            <br>
+
+
+
+            <div>
+                <input type="submit" value="submit Now" class="btn" id="Sub">
+                <input type="Reset" value="Reset Now" class="btn" id="Res">
+            </div>
+            <br>
+            <div class="x">
+                <a href="https://www.linkedin.com/in/jils-patel-9711b8242" target="_blank" class="last" id="AC">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a href="https://instagram.com" target="_blank" class="last" id="AC">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+                <a href="https://whatsapp.com" target="_blank" class="last" id="AC">
+                    <i class="fa-brands fa-whatsapp"></i>
+                </a>
+            </div>
+        </form>
+    </div>
+    <footer>
+        <div class="footer-rights">
+            CopyRight &#169 www.jils'sportfolio.com | All Rights Reserved
+        </div>
+    </footer>
+</body>
+
+</html>
