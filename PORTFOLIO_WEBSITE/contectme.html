@@ -1,166 +1,69 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/brands.min.css">
-    <!-- <link rel="stylesheet" href="Forms & Input Tags.css"> -->
-    <!-- <script src="Forms & Input Tags.js"></script> -->
-    <title>Forms</title>
-    <style>
-        body {
-            margin: 18px auto;
-            display: block;
-            width: 45%;
-            font-size: 20px;
-            color: white;
-            background: rgba(76, 175, 80, 0.3);
-        }
-
-        .container {
-            border: 5px solid white;
-            margin: 5px 5px 5px 5px;
-            background-color: rgb(0, 0, 57);
-            border-radius: 10px;
-            animation-name: jils;
-            animation-duration: 3s;
-            animation-iteration-count: 1;
-
-
-        }
-
-        .container h2 {
-            text-align: center;
-            text-decoration: underline;
-        }
-
-        .container input,
-        select {
-            width: 150px;
-            text-align: center;
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-        }
-
-        .container textarea {
-            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-            font-size: 20px;
-        }
-
-
-        .form1 div {
-            margin: auto;
-            padding: 5px;
-            text-align: center;
-            display: block;
-
-        }
-
-        .btn:hover {
-            color: rgb(0, 0, 57);
-            text-decoration: underline;
-            background-color: darkgray;
-        }
-
-        .x {
-            align-items: center;
-            color: white;
-        }
-
-        .x .last {
-            color: white;
-            text-decoration: none;
-            margin-right: 10px;
-        }
-
-        /* @keyframes jils {
-            from {
-                width: 200px;
-            }
-
-            to {
-                width: 1000px;
-            }
-        } */
-        footer .footer-rights {
-            text-align: center;
-            color: rgb(0, 0, 0);
-            padding: 12px 0;
-        }
-    </style>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
 </head>
 
 <body>
-    <div class="container">
-
-        <h2 style="text-decoration: none;font-size: 50px;">Contect Me</h2>
-        <form method="post" class="form1" action="backend.php">
-            <div id="Name">
-                Your Name:<input type="text" name="MyName" placeholder="Enter Your Name">
-            </div>
-            <br>
-
-            <div id="CName">
-                Company Name:<input type="text" name="CoName" placeholder="Enter Your Company Name">
-            </div>
-            <br>
-
-            <div id="Email">
-                Email:<input type="email" name="MyEmail" placeholder="Enter Your Email">
-            </div>
-            <br>
-
-            <div id="Mobile">
-                Mobile:<input type="number" name="Mymobile" placeholder="Enter Your Mobile">
-            </div>
-            <br>
-
-            <div id="DOB">
-                Date Of Birth: <input type="date" name="MyDate" placeholder="Select Your DOB">
-            </div>
-            <br>
-
-
-
-
-            <div id="Gender">
-                Gender: Male<input type="radio" name="MyGender"> Female<input type="radio" name="MyGender"
-                    placeholder="">
-            </div>
-            <br>
-
-            <div id="Write">
-                Write About You:<br><textarea name="MyText" cols="50" rows="10"
-                    placeholder="Write info About Your Self"></textarea>
-            </div>
-            <br>
-
-
-
-            <div>
-                <input type="submit" value="submit Now" class="btn" id="Sub">
-                <input type="Reset" value="Reset Now" class="btn" id="Res">
-            </div>
-            <br>
-            <div class="x">
-                <a href="https://www.linkedin.com/in/jils-patel-9711b8242" target="_blank" class="last" id="AC">
-                    <i class="fa-brands fa-linkedin"></i>
-                </a>
-                <a href="https://instagram.com" target="_blank" class="last" id="AC">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-                <a href="https://whatsapp.com" target="_blank" class="last" id="AC">
-                    <i class="fa-brands fa-whatsapp"></i>
-                </a>
-            </div>
-        </form>
-    </div>
-    <footer>
-        <div class="footer-rights">
-            CopyRight &#169 www.jils'sportfolio.com | All Rights Reserved
+    <form method="post" action="backend.php">
+        <div class="input-group">
+            <label class="input-group-text">First name</label>
+            <input type="text" aria-label="First name" name="fname" class="form-control">
+          </div>
+          <div class="input-group">
+            <label class="input-group-text">Last name</label>
+            <input type="text" aria-label="First name" name="lname" class="form-control">
+          </div>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Email address</label>
+            <input type="email" class="form-control" name="email" id="exampleFormControlInput1" placeholder="name@example.com">
         </div>
-    </footer>
+        <div class="mb-3">
+            <label for="exampleFormControlInput1" class="form-label">Date Of Birth</label>
+            <input type="date" class="form-control" name="date" id="exampleFormControlInput1" >
+        </div>
+        <div >
+            <label class="form-label">Gender: </label>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" name="gender" type="radio" id="inlineCheckbox1" value="male">
+                <label class="form-check-label" for="inlineCheckbox1">Male</label>
+            </div>
+            <div class="form-check form-check-inline">
+                <input class="form-check-input" name="gender" type="radio" id="inlineCheckbox2" value="female">
+                <label class="form-check-label" for="inlineCheckbox2">Female</label>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+            <textarea class="form-control" name="adr" id="exampleFormControlTextarea1" rows="3"></textarea>
+        </div>
+        <div class="mb-3">
+            <label for="formFile" class="form-label">Id Proof
+                <select class="form-select" name="doc" aria-label="Default select example">
+                    <option selected>Open this select menu</option>
+                    <option value="1">Adhar Card</option>
+                    <option value="2">Licence</option>
+                    <option value="3">PAN Card</option>
+                  </select>
+            </label>
+            <input class="form-control"  type="file" id="formFile">
+          </div>
+        <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="exampleCheck1">
+            <label class="form-check-label" for="exampleCheck1">Check me out</label>
+        </div>
+        <div class="col-12">
+            <input class="btn btn-primary" type="submit" value="submit">
+          </div>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+        crossorigin="anonymous"></script>
 </body>
 
 </html>
