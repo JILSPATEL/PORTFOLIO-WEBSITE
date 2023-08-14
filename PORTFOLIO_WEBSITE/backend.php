@@ -1,29 +1,34 @@
 <?php
-<?php
-// Check if the form is submitted
-    // Retrieve form data
-    $myName = $_POST["MyName"];
-    $coName = $_POST["CoName"];
-    $myEmail = $_POST["MyEmail"];
-    $myMobile = $_POST["Mymobile"];
-    $myDate = $_POST["MyDate"];
-    $myGender = $_POST["MyGender"];
-    $myText = $_POST["MyText"];
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    $fname = $_POST['fname'];
+    $lname = $_POST['lname'];
+    $email = $_POST['email'];
+    $date = $_POST['date'];
+    $gender = $_POST['gender'];
+    $adr = $_POST['adr'];
+    $doc = $_POST['doc'];
 
-    $conn = new mysqli('localhost','root','','portfolio_db');
-    if($conn->connect_error){
-        die('connection failed :'+$conn->connect_error);
+    $conn = mysqli_connect("localhost", "root", "", "portfolio_db");
+
+    if (!$conn) {
+        die("Connection failed: " . mysqli_connect_error());
+    }
+
+    $query = "INSERT INTO contect (first_name, last_name, email, dob, gender, address, id_proof)
+                VALUES ('$fname', '$lname', '$email', '$date', '$gender', '$adr', '$doc')";
+
+    if (mysqli_query($conn, $query)) {
+        echo "<script>alert('Data Inserted Successfully')</script>";
+        
+        ?>
+
+        <meta http-equiv="refresh" content="0; URL=http://localhost/PhpProject1/PORTFOLIO_WEBSITE/contectme.html" />
+        
+        <?php
+    } else {
+        echo "<script>alert('Something went wrong: " . mysqli_error($conn) . "')</script>";
+    }
+
+    mysqli_close($conn);
 }
-else{
-    $stmy=$conn->prepare("insert into contect(name,company,email,mobile,dob,gender,text) values(?,?,?,?,?,?,?)");
-    $stmy->bind_param("sssiiss",$myName,$coName,$myEmail, $myMobile,$myDate,$myGender,$myText);
-    $stmy->execute();
-    echo"register successfully";
-    $stmy->close();
-    $conn->close();
-}
-
-?>
-
-
 ?>
